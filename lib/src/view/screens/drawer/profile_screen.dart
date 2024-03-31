@@ -8,7 +8,6 @@ import 'package:pharmacy_warehouse_store_mobile/core/constants/app_colors.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/Cubits/Auth/Logout/logout_cubit.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/Cubits/User/user_cubit.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/model/user.dart';
-import 'package:pharmacy_warehouse_store_mobile/src/view/helpers/select_lang_dialog.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/view/helpers/show_loading_dialog.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/view/helpers/show_snack_bar.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/view/screens/auth/login_screen.dart';
