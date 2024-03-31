@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "/home/victoralvin/Pictures/MedHub-Mobile/linux"
+    "cmake.sourceDirectory": "/home/victoralvin/Pictures/MedHub-Mobile/linux",
+    "cmake.configureOnOpen": true
 }

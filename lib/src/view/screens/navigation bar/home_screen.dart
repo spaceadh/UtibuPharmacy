@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:pharmacy_warehouse_store_mobile/core/constants/app_colors.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/Cubits/BottomNavBar/bottom_nav_bar_cubit.dart';
-import 'package:pharmacy_warehouse_store_mobile/src/view/screens/drawer/profile_screen.dart';
+// import 'package:pharmacy_warehouse_store_mobile/src/view/screens/drawer/profile_screen.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/view/screens/navigation bar/cart_screen.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/view/screens/navigation bar/favourite_screen.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/view/screens/navigation bar/orders_screen.dart';
@@ -122,7 +122,7 @@ class _HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           onPressed: () async {
-            Get.off(() => const ProfileScreen());
+            // Get.off(() => const ProfileScreen());
           },
           icon: const Icon(
             Icons.account_circle,

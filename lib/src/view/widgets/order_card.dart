@@ -2,7 +2,6 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/model/order.dart';
-import 'package:pharmacy_warehouse_store_mobile/src/view/screens/order_details_screen.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/view/widgets/show_image.dart';
 
 class OrderCard extends StatelessWidget {
@@ -14,7 +13,7 @@ class OrderCard extends StatelessWidget {
     var theme = context.theme;
     return GestureDetector(
       onTap: () {
-        Get.off(() => const OrderDetailsScreen(), arguments: order.id);
+        // Get.off(() => const OrderDetailsScreen(), arguments: order.id);
       },
       child: Container(
         decoration: BoxDecoration(
