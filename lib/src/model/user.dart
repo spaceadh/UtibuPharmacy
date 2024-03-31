@@ -1,7 +1,6 @@
 class User {
   int id;
   String name;
-  String pharmacyName;
   String? pharmacyLocation;
   int phoneNumber;
   String? password;
@@ -13,7 +12,6 @@ class User {
   User({
     required this.id,
     required this.name,
-    required this.pharmacyName,
     required this.pharmacyLocation,
     required this.phoneNumber,
     this.password,
@@ -24,7 +22,6 @@ class User {
     return User(
         id: jsonData['id'] as int,
         name: jsonData['name'] as String,
-        pharmacyName: jsonData['pharmacyName'] as String,
         pharmacyLocation: jsonData['pharmacyLocation'],
         phoneNumber: int.parse(jsonData['phoneNumber']),
         image: jsonData['image']);
@@ -33,7 +30,6 @@ class User {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
     data['name'] = name;
-    data['pharmacyName'] = pharmacyName;
     data['pharmacyLocation'] = pharmacyLocation ?? "";
     data['phoneNumber'] = phoneNumber;
     data['password'] = password ?? "";
@@ -48,7 +44,6 @@ class User {
     User {
       id: $id,
       name: $name,
-      pharmacyName: $pharmacyName,
       pharmacyLocation: $pharmacyLocation,
       phoneNumber: $phoneNumber,
       password: $password,

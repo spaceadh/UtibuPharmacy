@@ -11,7 +11,6 @@ class RegisterCubit extends Cubit<RegisterState> {
 
   void registerWithPhoneNumber(
       {required String userName,
-      required String pharmacyName,
       required String phoneNumber,
       required String password}) async {
     try {
@@ -20,7 +19,6 @@ class RegisterCubit extends Cubit<RegisterState> {
         url: 'register',
         body: {
           'name': userName,
-          'pharmacyName': pharmacyName,
           'phoneNumber': phoneNumber,
           'password': password,
         },

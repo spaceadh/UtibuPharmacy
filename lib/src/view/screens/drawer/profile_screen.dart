@@ -128,16 +128,16 @@ class _ProfileSuccessView extends StatelessWidget {
             Get.to(() => const StatisticsScreen());
           },
         ),
-        const SizedBox(
-          height: 20,
-        ),
-        _ProfileOptionsListTile(
-          title: "language".tr,
-          icon: Icons.language,
-          onTap: () {
-            showSelectLangDialog();
-          },
-        ),
+        // const SizedBox(
+        //   height: 20,
+        // ),
+        // _ProfileOptionsListTile(
+        //   title: "language".tr,
+        //   icon: Icons.language,
+        //   onTap: () {
+        //     showSelectLangDialog();
+        //   },
+        // ),
         const SizedBox(
           height: 20,
         ),
@@ -179,35 +179,6 @@ class _UserDetails extends StatelessWidget {
         Text(
           user.name,
           style: theme.textTheme.headlineLarge,
-        ),
-        const SizedBox(
-          height: 20,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(
-              Icons.storefront,
-              size: 50,
-              color: Colors.lightBlueAccent,
-            ),
-            const SizedBox(
-              width: 20,
-            ),
-            Text(
-              user.pharmacyName,
-              style: theme.textTheme.titleLarge,
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(
-              width: 20,
-            ),
-            const Icon(
-              Icons.storefront,
-              size: 50,
-              color: Colors.lightBlueAccent,
-            ),
-          ],
         ),
       ],
     );

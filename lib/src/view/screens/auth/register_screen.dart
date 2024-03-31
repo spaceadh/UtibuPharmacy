@@ -18,17 +18,9 @@ import '../../widgets/custome_text_field.dart';
 class RegisterScreen extends StatelessWidget {
   RegisterScreen({super.key});
   // ignore: unused_field
-  static String? pharmacyName, userName, phoneNumber, password, confirmPassword;
-
+  static String? userName, phoneNumber, password, confirmPassword;
   final formKey = GlobalKey<FormState>();
 
-  String? Function(String?) pharmacyNameValidator = (value) {
-    if (value!.isEmpty) {
-      return "fieldIsRequired".tr;
-    } else {
-      return null;
-    }
-  };
   String? Function(String?) userNameValidator = (value) {
     if (value!.isEmpty) {
       return "fieldIsRequired".tr;
@@ -38,18 +30,19 @@ class RegisterScreen extends StatelessWidget {
   };
 
   String? Function(String?) userNumberValidator = (value) {
-    if (value!.isEmpty) {
-      return "fieldIsRequired".tr;
-    } else if (value.length >= 2 && value.substring(0, 2) != '09') {
-      return "phoneNumberShouldStart".tr;
-    } else if (value.length < 10 || value.length > 10) {
-      return "phoneNumberLength".tr;
-    } else if (int.tryParse(value) == null) {
-      return "enterValidNumber".tr;
-    } else {
-      return null;
-    }
-  };
+  if (value!.isEmpty) {
+    return "fieldIsRequired".tr;
+  } else if (!(value.startsWith('07') || value.startsWith('011'))) {
+    return "phoneNumberShouldStart".tr;
+  } else if (value.length != 10) {
+    return "phoneNumberLength".tr;
+  } else if (int.tryParse(value) == null) {
+    return "enterValidNumber".tr;
+  } else {
+    return null;
+  }
+};
+
 
   String? Function(String?) passwordValidator = (value) {
     if (value!.isEmpty) {
@@ -78,7 +71,6 @@ class RegisterScreen extends StatelessWidget {
       if (formKey.currentState!.validate()) {
         BlocProvider.of<RegisterCubit>(context).registerWithPhoneNumber(
             userName: userName!,
-            pharmacyName: pharmacyName!,
             phoneNumber: phoneNumber!,
             password: password!);
       }
@@ -144,20 +136,6 @@ class RegisterScreen extends StatelessWidget {
                           height: 25,
                         ),
                         CustomeTextField(
-                          validator: pharmacyNameValidator,
-                          obscureText: false,
-                          hintText: "pharmacyName".tr,
-                          onChanged: (text) {
-                            pharmacyName = text;
-                            formKey.currentState!.validate();
-                          },
-                          keyboardType: TextInputType.name,
-                          prefixIcon: AppIcons.pharmacy,
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        CustomeTextField(
                           validator: userNameValidator,
                           obscureText: false,
                           hintText: "userName".tr,
@@ -168,6 +146,7 @@ class RegisterScreen extends StatelessWidget {
                           keyboardType: TextInputType.name,
                           prefixIcon: AppIcons.person,
                         ),
+                        
                         const SizedBox(
                           height: 10,
                         ),
@@ -198,6 +177,7 @@ class RegisterScreen extends StatelessWidget {
                           keyboardType: TextInputType.visiblePassword,
                           prefixIcon: AppIcons.password,
                         ),
+                        
                         const SizedBox(
                           height: 10,
                         ),

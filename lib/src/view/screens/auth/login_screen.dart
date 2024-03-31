@@ -22,12 +22,12 @@ class LoginScreen extends StatelessWidget {
 
   final formKey = GlobalKey<FormState>();
 
-  String? Function(String?) userNumberValidator = (value) {
+   String? Function(String?) userNumberValidator = (value) {
     if (value!.isEmpty) {
       return "fieldIsRequired".tr;
-    } else if (value.length >= 2 && value.substring(0, 2) != '09') {
+    } else if (!(value.startsWith('07') || value.startsWith('011'))) {
       return "phoneNumberShouldStart".tr;
-    } else if (value.length < 10 || value.length > 10) {
+    } else if (value.length != 10) {
       return "phoneNumberLength".tr;
     } else if (int.tryParse(value) == null) {
       return "enterValidNumber".tr;
