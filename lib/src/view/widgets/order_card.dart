@@ -1,7 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pharmacy_warehouse_store_mobile/core/assets/app_images.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/model/order.dart';
+import 'package:pharmacy_warehouse_store_mobile/src/view/screens/order_details_screen.dart';
 import 'package:pharmacy_warehouse_store_mobile/src/view/widgets/show_image.dart';
 
 class OrderCard extends StatelessWidget {
@@ -13,7 +15,7 @@ class OrderCard extends StatelessWidget {
     var theme = context.theme;
     return GestureDetector(
       onTap: () {
-        // Get.off(() => const OrderDetailsScreen(), arguments: order.id);
+        Get.off(() => const OrderDetailsScreen(), arguments: order.id);
       },
       child: Container(
         decoration: BoxDecoration(
@@ -33,6 +35,37 @@ class OrderCard extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _CategorySpecText(
+                  content: 'orderID'.tr,
+                  imagePath: AppImages.orderID,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                _CategorySpecText(
+                  content: 'totalBill'.tr,
+                  imagePath: AppImages.orderBill,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                _CategorySpecText(
+                  content: 'status'.tr,
+                  imagePath: AppImages.orderStatus,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                _CategorySpecText(
+                  content: 'date'.tr,
+                  imagePath: AppImages.orderDate,
+                ),
+              ],
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.end,

@@ -6,6 +6,7 @@ class AppLocale implements Translations {
         "ar": {
           // start
           "welcomeMessage": "welcomeMessage",
+
            // auth
           "enterCredentials": "Please enter your credentials to Login",
           "signIn": "Sign in",
@@ -15,11 +16,10 @@ class AppLocale implements Translations {
           "register": "Register",
           "notAMember": "Not a member? ",
           "signUp": "Sign up",
-          "pharmacyName": "Pharmacy Name",
           "userName": "User Name",
           "confirmPassword": "Confirm Password",
           "fieldIsRequired": "Field is required",
-          "phoneNumberShouldStart": "Phone number should start with 07 or 011",
+          "phoneNumberShouldStart": "Phone number should start with 09",
           "phoneNumberLength": "Phone number length should be 10 digits",
           "enterValidNumber": "Please enter a valid number",
           "passwordShouldBe8": "Password should be at least 8 characters",
@@ -153,11 +153,10 @@ class AppLocale implements Translations {
           "register": "Register",
           "notAMember": "Not a member? ",
           "signUp": "Sign up",
-          "pharmacyName": "Pharmacy Name",
           "userName": "User Name",
           "confirmPassword": "Confirm Password",
           "fieldIsRequired": "Field is required",
-          "phoneNumberShouldStart": "Phone number should start with 07 or 011",
+          "phoneNumberShouldStart": "Phone number should start with 09",
           "phoneNumberLength": "Phone number length should be 10 digits",
           "enterValidNumber": "Please enter a valid number",
           "passwordShouldBe8": "Password should be at least 8 characters",

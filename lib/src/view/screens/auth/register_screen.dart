@@ -18,7 +18,8 @@ import '../../widgets/custome_text_field.dart';
 class RegisterScreen extends StatelessWidget {
   RegisterScreen({super.key});
   // ignore: unused_field
-  static String? userName, phoneNumber, password, confirmPassword;
+  static String?  userName, phoneNumber, password, confirmPassword;
+
   final formKey = GlobalKey<FormState>();
 
   String? Function(String?) userNameValidator = (value) {
@@ -31,19 +32,17 @@ class RegisterScreen extends StatelessWidget {
 
   String? Function(String?) userNumberValidator = (value) {
   if (value!.isEmpty) {
-    return "fieldIsRequired".tr;
-  } else if (!(value.startsWith('07') || value.startsWith('011'))) {
-    return "phoneNumberShouldStart".tr;
+    return "fieldIsRequired";
   } else if (value.length != 10) {
-    return "phoneNumberLength".tr;
+    return "phoneNumberLength";
+  } else if (!(value.startsWith('07') || value.startsWith('011'))) {
+    return "phoneNumberShouldStart";
   } else if (int.tryParse(value) == null) {
-    return "enterValidNumber".tr;
+    return "enterValidNumber";
   } else {
     return null;
   }
 };
-
-
   String? Function(String?) passwordValidator = (value) {
     if (value!.isEmpty) {
       return "fieldIsRequired".tr;
@@ -133,7 +132,7 @@ class RegisterScreen extends StatelessWidget {
 
                         // user email textfield
                         const SizedBox(
-                          height: 25,
+                          height: 10,
                         ),
                         CustomeTextField(
                           validator: userNameValidator,
@@ -146,7 +145,6 @@ class RegisterScreen extends StatelessWidget {
                           keyboardType: TextInputType.name,
                           prefixIcon: AppIcons.person,
                         ),
-                        
                         const SizedBox(
                           height: 10,
                         ),
@@ -177,7 +175,6 @@ class RegisterScreen extends StatelessWidget {
                           keyboardType: TextInputType.visiblePassword,
                           prefixIcon: AppIcons.password,
                         ),
-                        
                         const SizedBox(
                           height: 10,
                         ),
