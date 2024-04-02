@@ -4,37 +4,36 @@ import 'package:pharmacy_warehouse_store_mobile/src/model/category.dart';
 abstract class ProductType {
   const ProductType._();
   // ignore: non_constant_identifier_names
-  static String PainAndRelief = "PainAndRelief".tr; // مزيل للالم
+  static String PainAndRelief = "PainAndRelief".tr; 
 
   // ignore: non_constant_identifier_names
-  static String ColdAndFlu = "ColdAndFlu".tr; //البرد والانفلونزا
+  static String ColdAndFlu = "ColdAndFlu".tr; 
 
   // ignore: non_constant_identifier_names
-  static String AllergyMedications = "AllergyMedications".tr; //أدوية الحساسية
+  static String AllergyMedications = "AllergyMedications".tr; 
 
   // ignore: non_constant_identifier_names
-  static String DigestiveHealth = "DigestiveHealth".tr; //صحة الجهاز الهضمي
+  static String DigestiveHealth = "DigestiveHealth".tr; 
 
   // ignore: non_constant_identifier_names
   static String CardiovascularMedications =
-      "CardiovascularMedications".tr; //أدوية القلب والأوعية الدموية
+      "CardiovascularMedications".tr; 
 
   // ignore: non_constant_identifier_names
-  static String Antibiotics = "Antibiotics".tr; //مضادات حيوية
+  static String Antibiotics = "Antibiotics".tr; 
 
   // ignore: non_constant_identifier_names
-  static String DiabetesManagement = "DiabetesManagement".tr; //إدارة مرض السكري
-
+  static String DiabetesManagement = "DiabetesManagement".tr; 
   // ignore: non_constant_identifier_names
   static String DermatologicalProducts =
-      "DermatologicalProducts".tr; //المنتجات الجلدية
+      "DermatologicalProducts".tr; 
 
   // ignore: non_constant_identifier_names
   static String VitaminsAndSupplements =
-      "VitaminsAndSupplements".tr; //الفيتامينات والمكملات الغذائية
+      "VitaminsAndSupplements".tr; 
 
   // ignore: non_constant_identifier_names
-  static String WomenHealth = "WomenHealth".tr; //صحة المرأة
+  static String WomenHealth = "WomenHealth".tr;
 }
 
 class Product {
